@@ -1,0 +1,21 @@
+{
+  "name": "luiz-kamila",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Aplicativo romântico Luiz & Kamila",
+  "scripts": {
+    "start": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "android": "cap open android",
+    "ios": "cap open ios"
+  },
+  "dependencies": {
+    "@capacitor/core": "^7.4.3",
+    "@capacitor/android": "^7.4.3",
+    "@capacitor/ios": "^7.4.3"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^7.4.3",
+    "vite": "^6.3.5"
+  }
+}

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#fff8f5">
+  <meta name="description" content="Um cantinho especial feito com amor para Luiz e Kamila.">
+  <title>Luiz & Kamila ❤️</title>
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <div class="brand-mark">L<span>&</span>K</div>
+      <div class="topbar-copy"><small>UM CANTINHO SÓ NOSSO</small><strong>Luiz & Kamila</strong></div>
+      <button class="icon-btn" id="settingsShortcut" aria-label="Configurações">⚙</button>
+    </header>
+
+    <main>
+      <section class="screen active" id="home">
+        <div class="hero">
+          <div class="eyebrow"><span>✦</span> MEU LUGAR FAVORITO É VOCÊ <span>✦</span></div>
+          <div class="hero-heart">♥</div>
+          <h1>Luiz <em>&</em><br>Kamila</h1>
+          <p class="hero-subtitle">Entre tantos caminhos, meu favorito sempre será aquele que me leva até você.</p>
+          <div class="counter-card">
+            <div class="counter-heading">NOSSA HISTÓRIA EM TEMPO REAL</div>
+            <div class="counter-grid">
+              <div><strong id="years">0</strong><span>anos</span></div>
+              <div><strong id="months">0</strong><span>meses</span></div>
+              <div><strong id="days">0</strong><span>dias</span></div>
+              <div><strong id="hours">00</strong><span>horas</span></div>
+            </div>
+            <p id="counterMessage">E eu escolheria você em todas as versões da minha vida. ♥</p>
+          </div>
+        </div>
+
+        <article class="question-card">
+          <span class="section-kicker">UMA PERGUNTA IMPORTANTE</span>
+          <h2>Topa continuar escrevendo essa história comigo?</h2>
+          <p>Com todos os nossos capítulos, risadas, aprendizados e abraços?</p>
+          <div class="answer-row">
+            <button class="primary-btn" id="yesBtn">Sim, sempre! 💗</button>
+            <button class="soft-btn" id="noBtn">Não 😜</button>
+          </div>
+        </article>
+
+        <div class="section-head"><div><span class="section-kicker">PEQUENOS GRANDES MOTIVOS</span><h2>Por que eu amo você</h2></div><span class="head-icon">♡</span></div>
+        <article class="reason-card" id="reasonCard">
+          <div class="envelope">💌</div>
+          <p id="reasonText">Seu sorriso ilumina até o meu dia mais cansativo.</p>
+          <button class="text-btn" id="nextReason">Abrir outro motivo <span>↗</span></button>
+        </article>
+      </section>
+
+      <section class="screen" id="timeline">
+        <div class="page-intro"><span class="section-kicker">CADA CAPÍTULO, UMA LEMBRANÇA</span><h1>Nossa linha<br><em>do tempo</em></h1><p>Uma coleção dos momentos que fizeram a nossa história ser única.</p></div>
+        <div class="timeline-list" id="timelineList"></div>
+      </section>
+
+      <section class="screen" id="coupons">
+        <div class="page-intro"><span class="section-kicker">VALES FEITOS COM CARINHO</span><h1>Cupons do<br><em>amor</em> 🎟️</h1><p>Pequenos presentes que você pode resgatar quando quiser.</p></div>
+        <div class="coupon-list" id="couponList"></div>
+      </section>
+
+      <section class="screen" id="gallery">
+        <div class="page-intro"><span class="section-kicker">NOSSOS REGISTROS FAVORITOS</span><h1>Momentos<br><em>com você</em></h1><p>Porque alguns instantes merecem ficar guardados para sempre.</p></div>
+        <div class="gallery-grid" id="galleryGrid"></div>
+      </section>
+
+      <section class="screen" id="settings">
+        <div class="page-intro"><span class="section-kicker">ÁREA PARTICULAR</span><h1>Nosso cantinho,<br><em>do nosso jeito</em></h1><p>Personalize as mensagens, datas, lembranças e cupons.</p></div>
+        <div class="settings-card">
+          <label>Nome / título do casal<input id="coupleTitle" value="Luiz & Kamila"></label>
+          <label>Frase de abertura<input id="heroPhrase" value="Entre tantos caminhos, meu favorito sempre será aquele que me leva até você."></label>
+          <label>Data em que começaram a namorar<input id="startDate" type="date"></label>
+          <label>Mensagem do contador<input id="counterPhrase" value="E eu escolheria você em todas as versões da minha vida. ♥"></label>
+          <label>Motivos para amar (um por linha)<textarea id="reasonsInput" rows="5"></textarea></label>
+          <div class="settings-divider"></div>
+          <div class="settings-title">Nossa linha do tempo</div>
+          <div id="timelineEditor"></div>
+          <button class="outline-btn" id="addTimeline">＋ Adicionar lembrança</button>
+          <div class="settings-divider"></div>
+          <div class="settings-title">Cupons do amor</div>
+          <div id="couponEditor"></div>
+          <button class="outline-btn" id="addCoupon">＋ Adicionar cupom</button>
+          <div class="settings-divider"></div>
+          <div class="settings-title">Galeria de fotos</div>
+          <div id="galleryEditor"></div>
+          <button class="outline-btn" id="addPhoto">＋ Adicionar foto</button>
+          <button class="primary-btn full" id="saveSettings">Salvar todas as alterações 💗</button>
+          <div class="backup-row"><button class="soft-btn" id="exportBackup">Exportar backup</button><label class="soft-btn file-label">Importar backup<input type="file" id="importBackup" accept="application/json"></label></div>
+          <p class="tiny-note">Nesta primeira versão, as alterações ficam salvas neste aparelho. A sincronização entre o seu celular e o da Kamila será configurada na próxima etapa.</p>
+        </div>
+      </section>
+    </main>
+
+    <nav class="bottom-nav">
+      <button class="nav-item selected" data-screen="home"><span>⌂</span><small>Início</small></button>
+      <button class="nav-item" data-screen="timeline"><span>♡</span><small>História</small></button>
+      <button class="nav-item" data-screen="coupons"><span>🎟</span><small>Cupons</small></button>
+      <button class="nav-item" data-screen="gallery"><span>▧</span><small>Fotos</small></button>
+      <button class="nav-item" data-screen="settings"><span>⚙</span><small>Ajustes</small></button>
+    </nav>
+    <div class="toast" id="toast"></div>
+    <div class="modal-backdrop" id="modal"><div class="modal"><div class="modal-heart">♥</div><h2 id="modalTitle">Que alegria! 💗</h2><p id="modalText"></p><button class="primary-btn full" id="closeModal">Fechar com amor</button></div></div>
+  </div>
+  <script type="module" src="/src.js"></script>
+</body>
+</html>
